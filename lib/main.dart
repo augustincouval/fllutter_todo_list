@@ -1,11 +1,14 @@
 import 'package:couval_todo_list/components/tasks/task_master.dart';
 import 'package:couval_todo_list/screens/all_tasks.dart';
-import 'package:couval_todo_list/screens/home.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
+
 
 void main() {
   runApp(TodoList());
 }
+
+
 
 class TodoList extends StatelessWidget {
   // This widget is the root of your application.
@@ -13,6 +16,8 @@ class TodoList extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+
       initialRoute: '/',
       routes: {
         '/home': (context) => TodoList(),
