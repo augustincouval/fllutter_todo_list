@@ -1,7 +1,11 @@
+import 'package:couval_todo_list/models/task.dart';
 import 'package:flutter/material.dart';
 
 class TaskDetails extends StatefulWidget {
-  const TaskDetails({Key? key}) : super(key: key);
+
+  final Task task;
+  TaskDetails(this.task);
+
 
   @override
   _TaskDetailsState createState() => _TaskDetailsState();
@@ -12,8 +16,9 @@ class _TaskDetailsState extends State<TaskDetails> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Détail de la tâche'),
+        title: Text(widget.task.toString())
       ),
+      body: TaskDetails(widget.task),
     );
   }
 }

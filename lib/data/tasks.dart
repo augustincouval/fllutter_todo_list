@@ -1,15 +1,15 @@
-import 'package:flutter/material.dart';
 
-class Tasks extends StatefulWidget {
-  const Tasks({Key? key}) : super(key: key);
+import 'package:couval_todo_list/models/task.dart';
+import 'package:faker/faker.dart';
 
-  @override
-  _TaskState createState() => _TaskState();
-}
 
-class _TaskState extends State<Tasks> {
-  @override
-  Widget build(BuildContext context) {
-    return Container();
+class Tasks{
+
+  static List<Task> getTasks(){
+    var faker = new Faker();
+    return List<Task>.generate(15, (int i) => Task(i, faker.food.restaurant(), i%2 == 0 ? true : false) );
+
   }
+
 }
+
