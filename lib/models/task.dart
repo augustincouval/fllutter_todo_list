@@ -12,8 +12,13 @@ class Task {
     return this._id;
   }
 
+  DateTime? get createdAt {
+    return this._createdAt;
+  }
+
   bool get completed => _completed;
   String get content => _content;
+
 
 
   set completed(bool value){

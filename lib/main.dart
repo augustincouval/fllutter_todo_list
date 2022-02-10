@@ -1,13 +1,20 @@
+
 import 'package:couval_todo_list/components/tasks/task_details.dart';
-import 'package:couval_todo_list/components/tasks/task_master.dart';
-import 'package:couval_todo_list/models/task.dart';
+import 'package:couval_todo_list/data/taskCollection.dart';
+
 import 'package:couval_todo_list/screens/all_tasks.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_native_splash/flutter_native_splash.dart';
+
+import 'package:provider/provider.dart';
 
 
 void main() {
-  runApp(TodoList());
+  runApp(
+    ChangeNotifierProvider(
+        create: (context) => TaskCollection(),
+            child:  TodoList(),
+    ),
+  );
 }
 
 
@@ -20,6 +27,10 @@ class TodoList extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
 
+      initialRoute: '/',
+      routes: {
+        '/all' : (context) => AllTasks(),
+      },
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),

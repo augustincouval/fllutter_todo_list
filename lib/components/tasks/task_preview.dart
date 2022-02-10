@@ -1,5 +1,4 @@
 import 'package:couval_todo_list/components/tasks/task_details.dart';
-import 'package:couval_todo_list/components/tasks/task_master.dart';
 import 'package:flutter/material.dart';
 
 import '../../models/task.dart';
