@@ -20,11 +20,6 @@ class TodoList extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
 
-      initialRoute: '/',
-      routes: {
-        '/home': (context) => TodoList(),
-        '/all' : (context) => AllTasks(),
-       },
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
